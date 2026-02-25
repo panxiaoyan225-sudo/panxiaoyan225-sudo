@@ -24,7 +24,7 @@ Seasoned Analytics Professional and Master of Statistics with extensive experien
 
 ### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
 **Advanced Statistical Analysis**
-* Developed comprehensive models for **Outcome & Impact Evaluation** in the public sector (ESDC).
+* Developed comprehensive models for **Outcome & Impact Evaluation** in the public sector.
 * Translated complex statistical results into stakeholder-facing **Power BI** dashboards to drive organizational efficiency.
 
 ### [🤖 Applied AI in Production](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
