@@ -35,7 +35,7 @@ Seasoned Analytics Professional and Master of Statistics with extensive experien
 ---
 
 ## 📈 Portfolio Presence
-* **Live Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-0309279120.us-west1.run.app)
+* **Live Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
 * **Security Clearance:** Government of Canada
 
 ---
