@@ -1,7 +1,5 @@
 # Hi, I'm Xiaoyan 👋 
-
-### Senior Analyst & Analytics Lead | Decision Intelligence Expert
-Seasoned Analytics Professional and Master of Statistics with extensive experience across public and private sectors. I bridge the gap between complex data engineering—using Python, SQL, and dbt—and executive-level insights, specializing in the end-to-end automation of reporting ecosystems
+Analytics Professional and Master of Statistics with extensive experience across public and private sectors. I bridge the gap between complex data engineering—using Python, SQL, and dbt—and executive-level insights, specializing in the end-to-end automation of reporting ecosystems
 
 ---
 
