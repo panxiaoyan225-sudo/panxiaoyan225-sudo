@@ -1,4 +1,4 @@
-# 🛠️ Project Focus & Strategic Impact
+# 🛠️ Project Focus & Strategic Impact  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
 
 * **Automated Efficiency**: Develops production-grade ETL and AI-driven solutions to replace manual workflows and maximize organizational efficacy.
 
@@ -10,8 +10,7 @@
 
 ---
 
-* **Interactive Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
+* **Interactive Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
 
----
 
-![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
+
