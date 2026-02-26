@@ -10,7 +10,6 @@
 
 ---
 
-## 📈 Live Deployment
 * **Interactive Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
 
 ---
