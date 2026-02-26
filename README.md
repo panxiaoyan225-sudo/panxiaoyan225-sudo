@@ -1,38 +1,40 @@
-# Hi, I'm Xiaoyan 👋 
-Analytics Professional and Master of Statistics with extensive experience across public and private sectors. I bridge the gap between complex data engineering—using Python, SQL, and dbt—and executive-level insights, specializing in the end-to-end automation of reporting ecosystems
+# 🛠️ Technical Portfolio & Engineering Stack
+
+Focused on building production-grade data products, automated ETL pipelines, and AI-driven analytics.
 
 ---
 
-## 🛠 Technical Stack
-* **Data Engineering:** Python, SQL (T-SQL, PL/SQL), dbt, Airflow, Docker
-* **Analytics & BI:** Power BI, SAS
-* **Modern stack:** Windows (Python + Task Scheduler+ Batch scripts); Docker / WSL / Airflow; Google Cloud Dataflow; and Azure Data Factory
-* **Cloud Infrastructure :** Google Cloud (BigQuery) and Azure (Blob Storage, SQL)
-* **Science:** Master’s in Statistics, Modeling & Mathematical Decision Sciences    
+### **💻 Core Technical Stack**
+
+**Modern Data Engineering**
+* **Transformation:** dbt (Core/Cloud), SQL (PostgreSQL, T-SQL, PL/SQL)
+* **Orchestration:** Apache Airflow, Docker, WSL, GitHub Actions
+* **Languages:** Python (Pandas, NumPy, Scikit-learn), SAS, DAX
+* **Cloud Infrastructure:** Google Cloud (BigQuery, Dataflow), Azure (SQL, Blob Storage, ADF)
 
 ---
 
 ## 🚀 Key Technical Implementations
 
 ### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
-**Advanced Statistical Analysis**
-* **Strategic Leadership & Decision Support**: Leveraged Power BI to develop KPI frameworks and executive dashboards, utilizing analytical storytelling and outcome-based evaluations to transform complex data into actionable strategic insights
-  
-### [🏆 High-Efficiency ETL Framework](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo) 
+* **Strategic Frameworks**: Developing KPI systems and executive dashboards using analytical storytelling to transform raw data into actionable insights.
+* **Predictive Modeling**: Bridging the gap between traditional statistical modeling and modern AI to evaluate project outcomes and efficiencies.
+  
+### [🏆 High-Efficiency ETL Framework](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo) 
 **Enterprise-Grade Data Engineering**
-* **Automated Ingestion:** Robust multi-source data ingestion engine using **Python**, **Docker**, and **Airflow**.
-* **Quality Assurance:** Custom Python validation layer ensuring 100% data integrity before hitting the warehouse.
-* **Real-time Monitoring:** Automated **Slack alerting** for proactive pipeline health management.
+* **Automated Ingestion:** Robust multi-source data ingestion engine architected with **Python**, **Docker**, and **Airflow**.
+* **Quality Assurance:** Custom Python validation layer ensuring 100% data integrity before warehouse ingestion.
+* **Real-time Monitoring:** Automated **Slack/Email alerting** for proactive pipeline health management.
 
 ### [🤖 Applied AI in Production](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
 **Real-world AI Integration & Automation**
 * **Intelligent Workflows:** Implementing AI-driven logic to enhance data processing and decision-making within automated pipelines.
 * **LLM Orchestration:** Utilizing generative AI and prompt engineering to streamline complex reporting and insight generation.
-* **Predictive Analysis:** Bridging the gap between traditional statistical modeling and modern AI to evaluate project outcomes and efficiencies.
+
 ---
 
-## 📈 Portfolio Presence
-* **Live Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
+## 📈 Live Deployment
+* **Interactive Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
 
 ---
 
