@@ -16,7 +16,7 @@ Analytics Professional and Master of Statistics with extensive experience across
 
 ### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
 **Advanced Statistical Analysis**
-* Utilized Power BI for analytical storytelling and outcome & impact evaluation, translating complex statistical results into executive dashboards that enhance organizational efficiency.
+* **Strategic Leadership & Decision Support**: Leveraged Power BI to develop KPI frameworks and executive dashboards, utilizing analytical storytelling and outcome-based evaluations to transform complex data into actionable strategic insights
   
 ### [🏆 High-Efficiency ETL Framework](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo) 
 **Enterprise-Grade Data Engineering**
