@@ -14,16 +14,15 @@ Analytics Professional and Master of Statistics with extensive experience across
 
 ## 🚀 Key Technical Implementations
 
+### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
+**Advanced Statistical Analysis**
+* Utilized Power BI for analytical storytelling and outcome & impact evaluation, translating complex statistical results into executive dashboards that enhance organizational efficiency.
+  
 ### [🏆 High-Efficiency ETL Framework](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo) 
 **Enterprise-Grade Data Engineering**
 * **Automated Ingestion:** Robust multi-source data ingestion engine using **Python**, **Docker**, and **Airflow**.
 * **Quality Assurance:** Custom Python validation layer ensuring 100% data integrity before hitting the warehouse.
 * **Real-time Monitoring:** Automated **Slack alerting** for proactive pipeline health management.
-
-### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
-**Advanced Statistical Analysis**
-* Developed comprehensive models for **Outcome & Impact Evaluation** in the public sector.
-* Translated complex statistical results into stakeholder-facing **Power BI** dashboards to drive organizational efficiency.
 
 ### [🤖 Applied AI in Production](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
 **Real-world AI Integration & Automation**
