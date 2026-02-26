@@ -1,35 +1,12 @@
-# 🛠️ Technical Portfolio & Engineering Stack
+# 🛠️ Project Focus & Strategic Impact
 
-Focused on building production-grade data products, automated ETL pipelines, and AI-driven analytics.
+* **Automated Efficiency**: Develops production-grade ETL and AI-driven solutions to replace manual workflows and maximize organizational efficacy.
 
----
+* **Risk Mitigation**: Eliminates human error by architecting robust validation layers with Python, Docker, and Airflow to ensure 100% data integrity.
 
-### **💻 Core Technical Stack**
+* **Proactive Monitoring**: Implements real-time Slack and email alerting systems for early risk identification and proactive pipeline health management.
 
-**Modern Data Engineering**
-* **Transformation:** dbt (Core/Cloud), SQL (PostgreSQL, T-SQL, PL/SQL)
-* **Orchestration:** Apache Airflow, Docker, WSL, GitHub Actions
-* **Languages:** Python (Pandas, NumPy, Scikit-learn), SQL
-* **Cloud Infrastructure:** Google Cloud (BigQuery, Dataflow), Azure (SQL, Blob Storage, ADF)
-
----
-
-## 🚀 Key Technical Implementations
-
-### [📊 Statistics & Decision Intelligence](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
-* **Strategic Frameworks**: Developing KPI systems and executive dashboards using analytical storytelling to transform raw data into actionable insights.
-* **Predictive Modeling**: Bridging the gap between traditional statistical modeling and modern AI to evaluate project outcomes and efficiencies.
-  
-### [🏆 High-Efficiency ETL Framework](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo) 
-**Enterprise-Grade Data Engineering**
-* **Automated Ingestion:** Robust multi-source data ingestion engine architected with **Python**, **Docker**, and **Airflow**.
-* **Quality Assurance:** Custom Python validation layer ensuring 100% data integrity before warehouse ingestion.
-* **Real-time Monitoring:** Automated **Slack/Email alerting** for proactive pipeline health management.
-
-### [🤖 Applied AI in Production](https://github.com/panxiaoyan225-sudo/panxiaoyan225-sudo)
-**Real-world AI Integration & Automation**
-* **Intelligent Workflows:** Implementing AI-driven logic to enhance data processing and decision-making within automated pipelines.
-* **LLM Orchestration:** Utilizing generative AI and prompt engineering to streamline complex reporting and insight generation.
+* **AI-Driven Intelligence**: Orchestrates LLMs and statistical modeling to streamline complex reporting into high-accuracy, actionable strategic insights.
 
 ---
 
