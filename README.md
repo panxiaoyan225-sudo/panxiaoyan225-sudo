@@ -9,7 +9,7 @@ Focused on building production-grade data products, automated ETL pipelines, and
 **Modern Data Engineering**
 * **Transformation:** dbt (Core/Cloud), SQL (PostgreSQL, T-SQL, PL/SQL)
 * **Orchestration:** Apache Airflow, Docker, WSL, GitHub Actions
-* **Languages:** Python (Pandas, NumPy, Scikit-learn), SAS, DAX
+* **Languages:** Python (Pandas, NumPy, Scikit-learn), SQL
 * **Cloud Infrastructure:** Google Cloud (BigQuery, Dataflow), Azure (SQL, Blob Storage, ADF)
 
 ---
