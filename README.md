@@ -34,11 +34,7 @@ Analytics Professional and Master of Statistics with extensive experience across
 
 ## 📈 Portfolio Presence
 * **Live Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)
-* **Security Clearance:** Government of Canada
 
 ---
-
-## 📫 Connect with me
-* **Email:** panxiaoyan225@icloud.com
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
