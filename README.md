@@ -2,7 +2,7 @@
 
 * **Automated Efficiency**: Develops production-grade ETL and AI-driven solutions to replace manual workflows and maximize organizational efficacy.
 
-* **Error Elimination**:  Eliminates human error by architecting robust validation layers and production-grade code, ensuring 100% data integrity for high-stakes decision-making
+* **Risk Mitigation**:  Eliminates human error by architecting robust validation layers and production-grade code, ensuring 100% data integrity for high-stakes decision-making
 
 * **Proactive Monitoring**: Implements real-time Slack and email alerting systems for early risk identification and proactive pipeline health management.
 
