@@ -1,15 +1,13 @@
 # 🛠️ Project Focus & Strategic Impact  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
 
-* **Automated Efficiency**: Develops production-grade ETL and AI-driven solutions to replace manual workflows and maximize organizational efficacy.
-
-* **Risk Mitigation**:  Eliminates human error by architecting robust validation layers and production-grade code, ensuring 100% data integrity for high-stakes decision-making
-
-* **Proactive Monitoring**: Implements real-time Slack and email alerting systems for early risk identification and proactive pipeline health management.
-
-* **AI-Driven Intelligence**: Orchestrates LLMs and statistical modeling to streamline complex reporting into high-accuracy, actionable strategic insights.
-
+* **Distributed Cloud Engineering**: Migrating legacy analytics to high-performance Databricks/PySpark environments, utilizing distributed computing to scale healthcare and financial data processing beyond single-node limitations
+  
+* **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using Docker and Apache Airflow, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
+  
+* **Automated DevOps & Monitoring**: Deploying infrastructure via Azure DevOps and Google Cloud Run, featuring real-time Slack/email alerting systems for proactive pipeline health management
+  
+* **AI-Driven Strategic Intelligence**: Orchestrating LLMs and advanced prompt engineering (OmniAI-Toolkit) to streamline complex reporting, transforming multi-source data into high-accuracy, actionable insights for high-stakes environments.
 ---
-
 * **Interactive Portfolio:** [View My Analytics Dashboard](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
 
 
