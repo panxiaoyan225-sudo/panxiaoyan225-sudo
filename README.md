@@ -4,7 +4,7 @@
   
 * **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using Docker and Apache Airflow, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
   
-* **Automated DevOps & Monitoring**: Deploying infrastructure via Azure DevOps and Google Cloud Run, featuring real-time Slack/email alerting systems for proactive pipeline health management
+* **Multi-Cloud DevOps Orchestration:** Engineered a high-availability CI/CD framework using **Triple-Platform Integration** (GitHub Actions, Azure Pipelines, and GitHub Repos). Features redundant automated 9:00 AM "heartbeat" runs and real-time Slack alerting via a self-hosted Windows agent, ensuring 100% pipeline uptime and proactive health management for production ETLs.
   
 * **AI-Driven Strategic Intelligence**: Orchestrating LLMs and advanced prompt engineering (OmniAI-Toolkit) to streamline complex reporting, transforming multi-source data into high-accuracy, actionable insights for high-stakes environments.
 ---
