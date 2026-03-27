@@ -1,5 +1,5 @@
 # 🛠️ Project Focus  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
-* **Multi-Cloud DevOps Orchestration:** Engineered high-availability **CI/CD automation** using **GitHub Actions, Azure DevOps, and Cloud Run**. Features redundant automated daily "heartbeat" runs and **real-time Slack alerting** , ensuring 100% pipeline uptime and proactive health management for production ETLs.
+* **Multi-Cloud DevOps Orchestration:** Engineered high-availability **CI/CD automation** using **Azure DevOps, GitHub Actions, and Cloud Run**. Features redundant automated daily "heartbeat" runs and **real-time Slack alerting** , ensuring 100% pipeline uptime and proactive health management for production ETLs.
    
 * **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using **Docker and Apache Airflow**, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
   
