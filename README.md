@@ -2,7 +2,7 @@
  
 * **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using **Docker and Apache Airflow**, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
   
-* **Multi-Cloud DevOps Orchestration:** Engineered a high-availability **CI/CD automation** using **Triple-Platform Integration** ( **GitHub Actions, Azure DevOps, and GitHub Repos**). Features redundant automated daily "heartbeat" runs and real-time Slack alerting via a self-hosted Windows agent, ensuring 100% pipeline uptime and proactive health management for production ETLs.
+* **Multi-Cloud DevOps Orchestration:** Engineered a high-availability **CI/CD automation** using **Triple-Platform Integration** ( **GitHub Actions, Azure DevOps, and GitHub Repos**). Features redundant automated daily "heartbeat" runs and **real-time Slack alerting** via a self-hosted Windows agent, ensuring 100% pipeline uptime and proactive health management for production ETLs.
 
 * **Distributed Cloud Engineering**: Migrating legacy analytics to high-performance Databricks/PySpark environments, utilizing distributed computing to scale healthcare and financial data processing beyond single-node limitations
   
