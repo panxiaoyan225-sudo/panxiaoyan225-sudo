@@ -1,4 +1,4 @@
-# 🛠️ Project Focus & Strategic Impact  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
+# 🛠️ Project Focus  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)
  
 * **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using **Docker and Apache Airflow**, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
   
