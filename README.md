@@ -7,7 +7,7 @@
   
 * **AI-Driven Strategic Intelligence**: Orchestrating LLMs and advanced prompt engineering (OmniAI-Toolkit) to streamline complex reporting, transforming multi-source data into high-accuracy, actionable insights for high-stakes environments.
 ---
-*  [View my **Interactive Portfolio:**](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
+*  [View my **Interactive Portfolio**](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
 
 
 
