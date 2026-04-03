@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Lead & Data Architect Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #F8FAFC; color: #1E293B; font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid #E2E8F0; border-radius: 1.5rem; transition: all 0.3s ease; }
+        .nav-tab { cursor: pointer; padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s; white-space: nowrap; }
+        .nav-tab.active { background: #1E293B; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .chart-container { position: relative; height: 350px; width: 100%; }
+        .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; background: #10B981; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        
+        /* Evolution Graph Styles */
+        .evo-box { padding: 1.5rem; border-radius: 0.75rem; text-align: center; color: white; margin-bottom: 1rem; position: relative; }
+        .evo-arrow { color: #CBD5E1; font-size: 1.5rem; text-align: center; margin: -0.5rem 0 0.5rem 0; }
+        .evo-legacy { background-color: #94A3B8; }
+        .evo-enterprise { background-color: #00BFA5; }
+        .evo-modern { background-color: #FF6D00; }
+        
+        /* Containerized ETL Cards */
+        .stack-card { border-radius: 1rem; padding: 1.5rem; text-align: center; border: 2px solid transparent; transition: transform 0.2s; }
+        .stack-card:hover { transform: translateY(-5px); }
+        .card-airflow { border-color: #8B5CF6; color: #8B5CF6; }
+        .card-docker { border-color: #3B82F6; color: #3B82F6; }
+        .card-schema { border-color: #10B981; color: #10B981; }
+        
+        .layer-box { background: #F1F5F9; border-radius: 0.5rem; padding: 0.75rem; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto space-y-8">
+        
+        <!-- Main Portfolio Header -->
+        <header class="glass-card p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="space-y-4">
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <span class="status-dot"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Systems Operational • 100% Uptime</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black text-[#1E293B] leading-tight">Strategic Intelligence &<br>Data Architecture</h1>
+                <p class="text-lg text-slate-500 max-w-xl">
+                    Senior Analytics leadership bridging technical rigor and executive decision-making through automated orchestration and robust data engineering. 
+                </p>
+                <div class="flex flex-wrap gap-2 pt-4 justify-center md:justify-start">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">Python 3.12</span>
+                    <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold">Azure DevOps</span>
+                    <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs font-bold">GitHub Actions</span>
+                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold">Databricks/Spark</span>
+                    <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-bold">Docker/Airflow</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex w-72 h-72 bg-gradient-to-br from-slate-50 to-white rounded-3xl border-2 border-slate-100 shadow-sm items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#1E293B 1px, transparent 1px); background-size: 20px 20px;"></div>
+                <div class="text-center space-y-2 relative z-10">
+                    <div class="flex justify-center space-x-1 mb-2">
+                        <div class="w-2 h-8 bg-blue-500 rounded-full"></div>
+                        <div class="w-2 h-12 bg-purple-500 rounded-full"></div>
+                        <div class="w-2 h-6 bg-orange-500 rounded-full"></div>
+                    </div>
+                    <div class="text-sm font-black text-slate-800 uppercase tracking-tighter">Full-Stack Analytics</div>
+                    <div class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Architectural Portfolio</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Switcher -->
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-4">
+            <div id="tab-monitor" class="nav-tab active" onclick="switchTab('monitor')">System Monitor</div>
+            <div id="tab-efficiency" class="nav-tab" onclick="switchTab('efficiency')">Engineering Efficiency</div>
+            <div id="tab-container-etl" class="nav-tab" onclick="switchTab('container-etl')">Containerized ETL</div>
+            <div id="tab-engine-selection" class="nav-tab" onclick="switchTab('engine-selection')">Engine Selection</div>
+        </div>
+
+        <!-- CONTENT: SYSTEM MONITOR -->
+        <div id="content-monitor" class="tab-content space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Live Pipeline Orchestration</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <span class="text-sm font-medium text-slate-700">GitHub Actions (Self-Hosted)</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-bold uppercase">Healthy</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <span class="text-sm font-medium text-slate-700">Azure DevOps Pipelines</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-bold uppercase">Healthy</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                            <span class="text-sm font-medium text-slate-700">Google Cloud Run</span>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded font-bold uppercase">Status 200</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-center items-center">
+                    <h3 class="text-xl font-bold mb-6 self-start">Architecture Flow</h3>
+                    <div class="w-full space-y-2 text-center text-xs font-bold uppercase">
+                        <div class="p-2 bg-slate-800 text-white rounded">Orchestration Layer</div>
+                        <div class="text-slate-300">↓</div>
+                        <div class="p-2 bg-blue-600 text-white rounded">Validation & Security</div>
+                        <div class="text-slate-300">↓</div>
+                        <div class="p-2 bg-orange-500 text-white rounded">Execution & Delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT: ENGINEERING EFFICIENCY -->
+        <div id="content-efficiency" class="tab-content hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="glass-card p-8 text-center space-y-4">
+                        <div class="text-6xl font-black text-teal-600">95%</div>
+                        <h4 class="text-xl font-bold">RAM Reduction</h4>
+                        <p class="text-sm text-slate-500">Migration from WSL/Docker overhead to native Windows orchestration (GH Runners).</p>
+                    </div>
+                    <div class="glass-card p-8 text-center space-y-4">
+                        <div class="text-6xl font-black text-teal-600">&lt;200MB</div>
+                        <h4 class="text-xl font-bold">Runtime Footprint</h4>
+                        <p class="text-sm text-slate-500">Optimized self-hosted execution for high-frequency "Audit" tasks.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-8">
+                    <h3 class="text-xl font-bold mb-8">Orchestration Evolution</h3>
+                    <div class="max-w-sm mx-auto">
+                        <div class="evo-box evo-legacy shadow-sm">
+                            <div class="font-bold text-lg uppercase">Legacy: Task Scheduler</div>
+                            <div class="text-xs opacity-90">Local Batches</div>
+                        </div>
+                        <div class="evo-arrow">↓</div>
+                        <div class="evo-box evo-enterprise shadow-sm">
+                            <div class="font-bold text-lg uppercase">Enterprise: Azure DevOps</div>
+                            <div class="text-xs opacity-90">Variable Group Secrets</div>
+                        </div>
+                        <div class="evo-arrow">↓</div>
+                        <div class="evo-box evo-modern shadow-lg scale-105 border-2 border-white">
+                            <div class="font-bold text-lg uppercase">Modern: GitHub Actions</div>
+                            <div class="text-xs opacity-90">Self-Hosted Windows Service</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT: CONTAINERIZED ETL -->
+        <div id="content-container-etl" class="tab-content hidden space-y-8">
+            <!-- Top Environment Stack Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card stack-card card-airflow">
+                    <div class="text-3xl font-black uppercase mb-1">Airflow</div>
+                    <div class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Orchestration Engine</div>
+                    <div class="text-xs text-slate-500">Daily Automated Extraction & Monitoring</div>
+                </div>
+                <div class="glass-card stack-card card-docker">
+                    <div class="text-3xl font-black uppercase mb-1">Docker</div>
+                    <div class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Environment Stack</div>
+                    <div class="text-xs text-slate-500">Multi-Container (MySQL/Postgres/Airflow)</div>
+                </div>
+                <div class="glass-card stack-card card-schema">
+                    <div class="text-3xl font-black uppercase mb-1">100%</div>
+                    <div class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Schema Integrity</div>
+                    <div class="text-xs text-slate-500">Fail-Fast Logic in Transformation Layer</div>
+                </div>
+            </div>
+
+            <!-- Resilience Analysis Section -->
+            <div class="glass-card p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-black text-[#1E293B]">Pipeline Resilience Analysis</h3>
+                            <p class="text-slate-500 text-sm">Balancing API latency with vectorized transformation efficiency.</p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="uniRadarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-1 flex flex-col justify-center space-y-6">
+                        <div class="layer-box border-l-4 border-purple-400">
+                            <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Bronze Layer</div>
+                            <div class="text-sm font-bold text-slate-700">Raw Immutable JSON</div>
+                        </div>
+                        <div class="layer-box border-l-4 border-blue-400">
+                            <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Silver Layer</div>
+                            <div class="text-sm font-bold text-slate-700">Clean MySQL Upserts</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl text-xs text-slate-500 italic leading-relaxed">
+                            Architecture optimized for the Canadian Higher Education sector, ensuring auditability across longitudinal datasets.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT: ENGINE SELECTION -->
+        <div id="content-engine-selection" class="tab-content hidden space-y-6">
+            <div class="glass-card p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-1 space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-black text-blue-700 uppercase tracking-tighter">Strategic Engine Selection</h3>
+                            <p class="text-sm text-slate-500 mt-2">Staffing data orchestration for long-term care facilities (PBJ Compliance).</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="mb-2">
+                                <h4 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-2">Performance Benchmarks</h4>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center border-b border-slate-100 py-2">
+                                        <span class="text-xs font-bold text-slate-400 uppercase">Research</span>
+                                        <span class="text-sm font-semibold">Google Colab (SQLite)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center border-b border-slate-100 py-2 text-blue-700">
+                                        <span class="text-xs font-bold uppercase">Mid-Market</span>
+                                        <span class="text-sm font-semibold">Databricks (Pandas)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center border-b border-slate-100 py-2 text-orange-600">
+                                        <span class="text-xs font-bold uppercase">Enterprise</span>
+                                        <span class="text-sm font-semibold">Databricks (Spark)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-xs text-blue-800">
+                            <strong>Strategic Insight:</strong> Scaling decisions are based on the cost-to-compute ratio relative to data velocity.
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <div class="chart-container">
+                            <canvas id="hcLineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="flex flex-col md:flex-row justify-between items-center text-slate-400 text-xs py-10 gap-4">
+            <p>© 2024 Strategic Intelligence Portfolio • Powered by GitHub Actions</p>
+            <div class="flex gap-6">
+                <a href="https://github.com/panxiaoyan225-sudo" class="hover:text-slate-800 transition-colors font-bold uppercase tracking-tighter">GitHub</a>
+                <a href="#" class="hover:text-slate-800 transition-colors font-bold uppercase tracking-tighter">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('content-' + tab).classList.remove('hidden');
+            document.getElementById('tab-' + tab).classList.add('active');
+            
+            if(tab === 'container-etl') renderUniversityChart();
+            if(tab === 'engine-selection') renderHealthcareChart();
+        }
+
+        let uniChart, hcChart;
+
+        function renderUniversityChart() {
+            if(uniChart) uniChart.destroy();
+            const ctx = document.getElementById('uniRadarChart').getContext('2d');
+            uniChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['API Stability', 'Data Quality', 'Load Speed', 'Auditability', 'Resource Efficiency'],
+                    datasets: [{
+                        label: 'Metrics',
+                        data: [90, 100, 85, 95, 80],
+                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                        borderColor: '#8B5CF6',
+                        pointBackgroundColor: '#8B5CF6',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#8B5CF6'
+                    }]
+                },
+                options: { 
+                    maintainAspectRatio: false, 
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        r: {
+                            angleLines: { display: true, color: '#E2E8F0' },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderHealthcareChart() {
+            if(hcChart) hcChart.destroy();
+            const ctx = document.getElementById('hcLineChart').getContext('2d');
+            hcChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['50MB', '500MB', '2GB', '10GB', '100GB+'],
+                    datasets: [
+                        { label: 'Colab (SQLite)', data: [100, 80, 20, 5, 0], borderColor: '#94A3B8', borderDash: [5, 5], tension: 0.4 },
+                        { label: 'Pandas', data: [95, 98, 90, 40, 10], borderColor: '#3B82F6', borderWidth: 3, tension: 0.4 },
+                        { label: 'Spark', data: [60, 75, 85, 98, 100], borderColor: '#F97316', borderWidth: 3, tension: 0.4 }
+                    ]
+                },
+                options: { 
+                    maintainAspectRatio: false, 
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: { y: { beginAtZero: true, ticks: { display: false } } }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
