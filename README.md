@@ -1,5 +1,5 @@
-# 🛠️ Project Focus  ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square) 
-[🏥 View Interactive infographic](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/index.html)
+# 🛠️ Project Focus   ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square) 
+[🏥 Explore Project Architecture](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/index.html)
 * **Automated CI/CD Pipeline Integration:** Engineered high-availability **CI/CD automation** across **Azure DevOps, GitHub Actions, and Google Cloud (Cloud Run)**. Features redundant automated hourly "heartbeat" runs and **real-time Slack alerting** , ensuring 100% pipeline uptime and proactive health management for production ETLs.
    
 * **Production-Grade Orchestration**: Containerized ETL/ELT pipelines using **Docker and Apache Airflow**, with a focus on implementing custom Python validation layers to ensure 100% data integrity for institutional decision-making
