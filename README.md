@@ -6,7 +6,7 @@
   
 * **Distributed Cloud Engineering**: Migrating legacy analytics to high-performance **Databricks/PySpark** environments, utilizing distributed computing to scale healthcare and financial data processing beyond single-node limitations [[📊 View Databrick Infographic](https://panxiaoyan225-sudo.github.io/Notebooks_Databricks-Colab/healthcare_infographic.html)
   
-* **AI-Driven Strategic Intelligence**: Orchestrating LLMs and advanced prompt engineering (OmniAI-Toolkit) to streamline complex reporting, transforming multi-source data into high-accuracy, actionable insights for high-stakes environments.
+* **Autonomous Multi-Agent Systems (OpenClaw)**: Engineered an objective-driven framework where independent agents (Mei, John, Sam) execute tasks in isolated file-system workspaces (e.g., C:/Users/ADMINI.openclaw/...). Orchestrated via a centralized API Gateway (OpenRouter/Ollama) to ensure secure, high-accuracy autonomous workflows beyond standard chatbots. | [📊 View Agents Logic Infographic](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/agents_infographic.html)
 ---
 *  [View my **Portfolio**](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
 
