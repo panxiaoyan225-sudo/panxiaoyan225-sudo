@@ -8,7 +8,7 @@
   
 * **Autonomous Multi-Agent Systems (OpenClaw)**: Engineered an objective-driven framework where independent agents (Mei, John, Sam) execute tasks in isolated file-system workspaces (e.g., C:/Users/ADMINI.openclaw/...). Orchestrated via a centralized API Gateway (OpenRouter/Ollama) to ensure secure, high-accuracy autonomous workflows beyond standard chatbots. | [📊 View Autonomous Multi-Agent ](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/agents_infographic.html)
 
-* **Forecasting SARIMAX modeling via Azure Databricks ** to deliver seasonal airline passenger insights, orchestrated via GitHub Actions for daily reliability
+* **Forecasting SARIMAX modeling via Azure Databricks** to deliver seasonal airline passenger insights, orchestrated via GitHub Actions for daily reliability
 ---
 *  [View my **Portfolio**](https://xiaoyan-pan-data-analytics-portfolio-170069322954.us-west1.run.app/)                            
 
