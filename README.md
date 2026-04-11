@@ -6,7 +6,7 @@
   
 * **Distributed Cloud Engineering(Databricks)**: Migrating legacy analytics to high-performance **Databricks/PySpark** environments, utilizing distributed computing to scale healthcare and financial data processing beyond single-node limitations [[📊 View Databricks Lakehouse](https://panxiaoyan225-sudo.github.io/Notebooks_Databricks-Colab/healthcare_infographic.html)
   
-* **Autonomous Multi-Agent Systems (OpenClaw)**: Engineered an objective-driven framework where independent agents (Mei, John, Sam) execute tasks in isolated file-system workspaces (e.g., C:/Users/ADMINI.openclaw/...). Orchestrated via a centralized API Gateway (OpenRouter/Ollama) to ensure secure, high-accuracy autonomous workflows beyond standard chatbots. | [📊 View Autonomous Multi-Agent ](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/agents_infographic.html)
+* **Autonomous Multi-Agent Systems (OpenClaw)**: Engineered an objective-driven framework that transitions from simple chatbots to Autonomous Monitoring Systems. By utilizing independent agents to execute tasks in isolated workspaces, this architecture provides a secure, high-accuracy layer of defense to ensure 100% data integrity and proactive anomaly detection across enterprise pipeline | [📊 View Autonomous Multi-Agent ](https://panxiaoyan225-sudo.github.io/panxiaoyan225-sudo/agents_infographic.html)
 
 * **Time Series Forecasting**: SARIMAX-driven analytical pipeline in Azure Databricks__Jupyter Notebook to model seasonal patterns, orchestrated via GitHub Actions for daily automated execution and reliability.
 
