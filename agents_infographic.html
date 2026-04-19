@@ -67,12 +67,11 @@
             cursor: pointer;
             opacity: 0;
             transition: opacity 0.3s ease;
-            z-index: 100; /* Ensure it stays on top */
+            z-index: 100;
             font-size: 16px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         
-        /* Show button on hover */
         .diagram-wrapper:hover .enlarge-btn { opacity: 1; }
         .diagram-wrapper:hover .diagram-img { filter: brightness(90%); }
 
@@ -116,12 +115,18 @@
             align-items: center;
             justify-content: center;
         }
+        
+        /* Updated Modal Content for larger size */
         .modal-content {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 98%; 
+            max-height: 98%;
+            width: auto;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            cursor: zoom-out;
         }
+        
         .close-modal {
             position: absolute;
             top: 20px;
@@ -145,7 +150,6 @@
 
     <div class="diagram-wrapper">
         <button class="enlarge-btn" onclick="openModal()">Enlarge Image</button>
-        
         <img src="ai_agent.jpg" class="diagram-img" alt="OpenClaw Logic Diagram">
 
         <a href="#" class="hotspot spot-gateway">API GATEWAY<br>(Local Model Hosting(via Ollama))</a>
