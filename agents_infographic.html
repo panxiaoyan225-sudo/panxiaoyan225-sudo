@@ -43,14 +43,13 @@
             border: 1px solid #e1e4e8;
             border-radius: 8px;
             overflow: hidden;
-            cursor: pointer; /* Indicates it's interactive */
         }
         
         .diagram-img {
             display: block;
             max-width: 100%;
             height: auto;
-            transition: transform 0.3s ease;
+            transition: filter 0.3s ease;
         }
 
         /* Enlarge Button Styling */
@@ -64,11 +63,16 @@
             padding: 12px 24px;
             border-radius: 30px;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
             opacity: 0;
             transition: opacity 0.3s ease;
-            pointer-events: none; /* Ensures hover passes through to wrapper */
-            z-index: 10;
+            z-index: 100; /* Ensure it stays on top */
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
+        
+        /* Show button on hover */
         .diagram-wrapper:hover .enlarge-btn { opacity: 1; }
         .diagram-wrapper:hover .diagram-img { filter: brightness(90%); }
 
@@ -108,7 +112,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.85);
+            background-color: rgba(0,0,0,0.9);
             align-items: center;
             justify-content: center;
         }
@@ -139,8 +143,9 @@
         Each agent operates within a dedicated local file-system workspace, coordinated by an intelligent API Gateway.
     </p>
 
-    <div class="diagram-wrapper" onclick="openModal()">
-        <div class="enlarge-btn">Enlarge Image</div>
+    <div class="diagram-wrapper">
+        <button class="enlarge-btn" onclick="openModal()">Enlarge Image</button>
+        
         <img src="ai_agent.jpg" class="diagram-img" alt="OpenClaw Logic Diagram">
 
         <a href="#" class="hotspot spot-gateway">API GATEWAY<br>(Local Model Hosting(via Ollama))</a>
@@ -150,7 +155,7 @@
     </div>
 
     <div style="margin-top: 30px; font-size: 14px; color: #6a737d;">
-        <em>Hover over the components to see routing logic and workspace paths.</em>
+        <em>Hover over the diagram to enlarge.</em>
     </div>
 </div>
 
