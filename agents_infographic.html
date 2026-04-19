@@ -5,161 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClaw: Multi-Agent Autonomy Architecture</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            color: #24292e;
-            display: flex;
-            justify-content: center;
-            padding: 40px;
-        }
-        .container {
-            max-width: 1000px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .header-label {
-            color: #0366d6;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        h1 { margin: 0 0 20px 0; font-size: 28px; }
-        .description {
-            color: #586069;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        /* Interactive Diagram Container */
-        .diagram-wrapper {
-            position: relative;
-            display: inline-block;
-            border: 1px solid #e1e4e8;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f9; color: #24292e; display: flex; justify-content: center; padding: 40px; }
+        .container { max-width: 1000px; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
         
-        .diagram-img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            transition: filter 0.3s ease;
-        }
-
-        /* Enlarge Button Styling */
-        .enlarge-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(3, 102, 214, 0.9);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 100;
-            font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
+        .diagram-wrapper { position: relative; display: inline-block; border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; }
+        .diagram-img { display: block; max-width: 100%; height: auto; transition: filter 0.3s ease; }
         
+        /* Enlarge Button */
+        .enlarge-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(3, 102, 214, 0.9); color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; border: none; cursor: pointer; opacity: 0; transition: opacity 0.3s ease; z-index: 100; font-size: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
         .diagram-wrapper:hover .enlarge-btn { opacity: 1; }
         .diagram-wrapper:hover .diagram-img { filter: brightness(90%); }
 
-        /* Hotspot Styling */
-        .hotspot {
-            position: absolute;
-            border: 2px dashed #0366d6;
-            background: rgba(3, 102, 214, 0.1);
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #0366d6;
-            font-weight: bold;
-            font-size: 12px;
-            opacity: 0;
-        }
-        .hotspot:hover {
-            opacity: 1;
-            background: rgba(3, 102, 214, 0.2);
-            border-style: solid;
-        }
-
-        .spot-gateway { top: 45%; left: 35%; width: 15%; height: 15%; }
-        .spot-mei { top: 15%; left: 55%; width: 35%; height: 15%; }
-        .spot-john { top: 40%; left: 55%; width: 35%; height: 15%; }
-        .spot-sam { top: 65%; left: 55%; width: 35%; height: 15%; }
-
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            align-items: center;
-            justify-content: center;
-        }
+        /* Modal Styling - Optimized for Max Space */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); align-items: center; justify-content: center; }
         
-        /* Updated Modal Content for larger size */
         .modal-content {
-            max-width: 110%; 
-            max-height: 110%;
-            width: auto;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            width: 100vw;       /* Fill screen width */
+            height: 100vh;      /* Fill screen height */
+            object-fit: contain; /* Keeps aspect ratio, scales image to fit fully without cropping */
+            padding: 20px;      /* Adds a small buffer to ensure edges don't touch the screen border */
+            box-sizing: border-box;
             cursor: zoom-out;
         }
         
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+        .close-modal { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 1001; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-label">Project Deep-Dive</div>
     <h1>Proving Multi-Agent Autonomy with OpenClaw</h1>
-    <p class="description">
-        This architecture demonstrates a transition from simple chatbots to <strong>Autonomous Systems</strong>. 
-        Each agent operates within a dedicated local file-system workspace, coordinated by an intelligent API Gateway.
-    </p>
-
     <div class="diagram-wrapper">
         <button class="enlarge-btn" onclick="openModal()">Enlarge Image</button>
         <img src="ai_agent.jpg" class="diagram-img" alt="OpenClaw Logic Diagram">
-
-        <a href="#" class="hotspot spot-gateway">API GATEWAY<br>(Local Model Hosting(via Ollama))</a>
-        <a href="#" class="hotspot spot-mei">MAIN / MEI<br>(Global Workspace)</a>
-        <a href="#" class="hotspot spot-john">JOHN<br>(Isolated Workspace)</a>
-        <a href="#" class="hotspot spot-sam">SAM<br>(Isolated Workspace)</a>
-    </div>
-
-    <div style="margin-top: 30px; font-size: 14px; color: #6a737d;">
-        <em>Hover over the diagram to enlarge.</em>
     </div>
 </div>
 
@@ -169,13 +47,8 @@
 </div>
 
 <script>
-    function openModal() {
-        document.getElementById("imageModal").style.display = "flex";
-    }
-
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
+    function openModal() { document.getElementById("imageModal").style.display = "flex"; }
+    function closeModal() { document.getElementById("imageModal").style.display = "none"; }
 </script>
 
 </body>
