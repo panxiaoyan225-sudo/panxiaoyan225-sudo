@@ -5,169 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClaw Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;700&display=swap');
-        
-        body { font-family: 'Roboto', sans-serif; }
-        .font-mono { font-family: 'Roboto Mono', sans-serif; }
-        
-        /* Modal and Hover Effect Styles */
-        .diagram-wrapper { transition: box-shadow 0.3s ease; }
-        .diagram-wrapper:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
-        .diagram-img { transition: filter 0.3s ease; }
-        .diagram-wrapper:hover .diagram-img { filter: brightness(95%); }
-
-        .enlarge-btn {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(16, 185, 129, 0.9); color: white;
-            padding: 10px 20px; border-radius: 30px;
-            font-weight: bold; border: none; cursor: pointer;
-            opacity: 0; transition: opacity 0.3s ease;
-            z-index: 100; font-size: 14px;
-        }
-        .diagram-wrapper:hover .enlarge-btn { opacity: 1; }
-
-        .modal {
-            display: none; position: fixed; z-index: 1000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.95);
-            align-items: center; justify-content: center;
-        }
-        .modal-content {
-            width: 100vw; height: 100vh;
-            object-fit: contain; padding: 20px;
-            box-sizing: border-box; cursor: zoom-out;
-        }
-        .close-modal { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 1001; }
-    </style>
 </head>
-<body class="bg-slate-100 p-8 min-h-screen">
+<body class="bg-slate-100 flex items-center justify-center min-h-screen">
 
-    <div class="max-w-7xl mx-auto flex flex-col xl:flex-row gap-8">
-        
-        <div class="flex-none w-full xl:w-3/5 diagram-wrapper cursor-pointer" onclick="openModal()">
-            <div class="bg-white rounded-[3rem] p-10 border border-slate-200 overflow-hidden relative shadow-2xl">
-                
-                <button class="enlarge-btn">Enlarge Image</button>
-
-                <div class="relative h-[600px] w-full diagram-img">
-                    
-                    <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
-                        <defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" /></marker></defs>
-                        <path d="M 120 180 L 260 180" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 380 180 L 440 180 L 440 80 L 520 80" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 380 180 L 520 280" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 380 180 L 440 180 L 440 480 L 520 480" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 320 380 L 320 250" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 380 430 L 480 430 L 480 480 L 520 480" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="4 4" />
-                        <path d="M 610 340 L 610 420" stroke="#cbd5e1" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 720 420 L 720 340" stroke="#cbd5e1" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
-                        <path d="M 320 480 L 320 540 L 60 540 L 60 250" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="6 2" />
-                    </svg>
-
-                    <div class="absolute top-[155px] left-[150px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-white px-2">Project Task</div>
-                    <div class="absolute top-[155px] left-[390px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-white px-2">Local Model Inference</div>
-                    <div class="absolute top-[410px] left-[400px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-white px-2">Sub-task Assignment</div>
-                    <div class="absolute top-[520px] left-[120px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-white px-2">Completed Feature / Report</div>
-
-                    <div class="absolute top-[130px] left-0 w-[120px] bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center mb-2 shadow-lg shadow-sky-200">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                        </div>
-                        <span class="text-[10px] font-black text-slate-800 uppercase tracking-tight">Telegram</span>
-                    </div>
-
-                    <div class="absolute top-[140px] left-[260px] w-[120px] bg-emerald-500 rounded-2xl p-4 shadow-xl border border-emerald-400 flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-white text-emerald-600 flex items-center justify-center mb-2">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/></svg>
-                        </div>
-                        <span class="text-[9px] font-black text-white uppercase text-center leading-tight">API GATEWAY</span>
-                    </div>
-
-                    <div class="absolute top-[380px] left-[260px] w-[120px] bg-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center mb-2 border border-slate-600">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/></svg>
-                        </div>
-                        <span class="text-[9px] font-bold text-white text-center">Coordinator</span>
-                    </div>
-
-                    <div class="absolute top-[40px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-green-500 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="14" x="3" y="11" rx="2"/></svg>
-                        </div>
-                        <h4 class="text-[11px] font-black text-slate-800 uppercase">Main / Mei</h4>
-                    </div>
-
-                    <div class="absolute top-[240px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-blue-500 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/></svg>
-                        </div>
-                        <h4 class="text-[11px] font-black text-slate-800 uppercase">John</h4>
-                    </div>
-
-                    <div class="absolute top-[440px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-orange-500 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6"/></svg>
-                        </div>
-                        <h4 class="text-[11px] font-black text-slate-800 uppercase">Sam</h4>
-                    </div>
-
-                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-8 bg-white px-8 py-3 rounded-3xl border border-slate-200 shadow-xl">
-                        <div class="flex items-center gap-2">
-                            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-                            <span class="text-[9px] font-bold text-slate-700 uppercase tracking-widest">Active System</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg width="14" height="14" class="text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            <span class="text-[9px] font-medium text-slate-600">End-to-End Encryption</span>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 w-full text-center">
-                        <span class="text-[10px] font-bold text-slate-700 uppercase tracking-widest bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full border border-slate-200 shadow-sm">
-                            Multi-Agent Logical Diagram: In-Depth Gateway Routing
-                        </span>
-                        <span class="text-[7px] text-slate-400">Architecture designed for local deployment with air-gapped data protocols.</span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="flex-grow w-full xl:w-2/5 flex flex-col gap-4">
-            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex gap-4">
-                <div class="text-sky-500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
-                <div><h3 class="font-bold text-slate-800">Objective-Driven</h3><p class="text-xs text-slate-500">Architected with specific goals for focused execution.</p></div>
-            </div>
-            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex gap-4">
-                <div class="text-yellow-500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-                <div><h3 class="font-bold text-slate-800">Independent</h3><p class="text-xs text-slate-500">Navigates complex workflows without human intervention.</p></div>
-            </div>
-            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex gap-4">
-                <div class="text-emerald-500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                <div><h3 class="font-bold text-slate-800">Secure</h3><p class="text-xs text-slate-500">Operates in isolated environments with controlled access.</p></div>
-            </div>
-            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex gap-4">
-                <div class="text-indigo-500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                <div><h3 class="font-bold text-slate-800">Collaborative Teams</h3><p class="text-xs text-slate-500">Multi-agent DevOps workflow for shared research, coding, and testing.</p></div>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close-modal">&times;</span>
-        <svg class="modal-content" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
-            <rect width="800" height="600" fill="#f8fafc" rx="20"/>
-            <use href="#arrowhead"/>
-            <use href="#diagramArrows"/>
+    <div class="w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden relative shadow-2xl">
+        <div class="relative h-[600px]">
+            
+            <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                    </marker>
+                </defs>
+                <path d="M 120 180 L 260 180" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 380 180 L 440 180 L 440 80 L 520 80" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 380 180 L 520 280" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 380 180 L 440 180 L 440 480 L 520 480" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 320 380 L 320 250" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 380 430 L 480 430 L 480 480 L 520 480" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="4 4" />
+                <path d="M 610 340 L 610 420" stroke="#cbd5e1" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 720 420 L 720 340" stroke="#cbd5e1" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)" />
+                <path d="M 320 480 L 320 540 L 60 540 L 60 250" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="6 2" />
             </svg>
+
+            <div class="absolute top-[155px] left-[150px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Project Task</div>
+            <div class="absolute top-[155px] left-[390px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Local Model Inference</div>
+            <div class="absolute top-[410px] left-[400px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Sub-task Assignment</div>
+            <div class="absolute top-[520px] left-[120px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Completed Feature / Report</div>
+
+            <div class="absolute top-[130px] left-0 w-[120px] bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center mb-2 shadow-lg shadow-sky-200">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </div>
+                <span class="text-[10px] font-black text-slate-800 uppercase tracking-tight">Telegram</span>
+            </div>
+
+            <div class="absolute top-[140px] left-[260px] w-[120px] bg-emerald-500 rounded-2xl p-4 shadow-xl border border-emerald-400 flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-white text-emerald-600 flex items-center justify-center mb-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                </div>
+                <span class="text-[9px] font-black text-white uppercase text-center">API GATEWAY</span>
+            </div>
+
+            <div class="absolute top-[380px] left-[260px] w-[120px] bg-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center mb-2 border border-slate-600">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <span class="text-[9px] font-bold text-white text-center">Coordinator</span>
+            </div>
+
+            <div class="absolute top-[40px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-green-500 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="14" x="3" y="11" rx="2"/><path d="M12 5V3m0 0l-2 2m2-2l2 2"/></svg></div>
+                <div><h4 class="text-[11px] font-black text-slate-800 uppercase">Main / Mei</h4><p class="text-[8px] text-slate-600">Local Model: Qwen2</p></div>
+            </div>
+
+            <div class="absolute top-[240px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-blue-500 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <div><h4 class="text-[11px] font-black text-slate-800 uppercase">John</h4><p class="text-[8px] text-slate-600">Write & Refine Code</p></div>
+            </div>
+
+             <div class="absolute top-[440px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-orange-500 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6a2 2 0 0 0 0 4v2a5 5 0 0 1-5 5"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
+                <div><h4 class="text-[11px] font-black text-slate-800 uppercase">Sam</h4><p class="text-[8px] text-slate-600">Test & Verify</p></div>
+            </div>
+
+        </div>
     </div>
-
-    <script>
-        function openModal() { document.getElementById("imageModal").style.display = "flex"; }
-        function closeModal() { document.getElementById("imageModal").style.display = "none"; }
-    </script>
-
 </body>
 </html>
