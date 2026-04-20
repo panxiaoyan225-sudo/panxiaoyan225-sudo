@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agent Architecture</title>
+    <title>OpenClaw Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .group:hover .hover-trigger { opacity: 1; }
-    </style>
 </head>
 <body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen py-12 px-4">
 
     <div class="text-center mb-10 max-w-3xl">
         <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">AI Agent Architecture</h1>
         <p class="text-slate-600 text-lg leading-relaxed">
-            These agents go beyond simple chatbots—they are autonomous systems with defined objectives, 
-            capable of performing tasks independently as well as working collaboratively within a team.
+            these agents go beyond simple chatbots—they are autonomous systems with defined objectives, 
+            capable of performing tasks independently as well as working collaboratively within a team
         </p>
     </div>
 
-    <div class="group relative w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden shadow-2xl transition-all duration-300">
-        
-        <button onclick="toggleModal(true)" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-slate-700 px-4 py-2 rounded-full font-bold shadow-lg opacity-0 hover:bg-slate-100 transition-opacity duration-300 hover-trigger border border-slate-200 text-xs">
-            Enlarge Image
-        </button>
-
-        <div id="mainDiagram" class="relative h-[600px]">
+    <div class="w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden relative shadow-2xl">
+        <div class="relative h-[600px]">
+            
             <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
                 <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" /></marker>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                    </marker>
                 </defs>
                 <path d="M 120 180 L 260 180" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
                 <path d="M 380 180 L 440 180 L 440 80 L 520 80" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
@@ -41,18 +36,29 @@
                 <path d="M 320 480 L 320 540 L 60 540 L 60 250" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="6 2" />
             </svg>
 
+            <div class="absolute top-[155px] left-[150px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Project Task</div>
+            <div class="absolute top-[155px] left-[390px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Local Model Inference</div>
+            <div class="absolute top-[410px] left-[400px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Sub-task Assignment</div>
+            <div class="absolute top-[520px] left-[120px] text-[8px] font-bold text-slate-500 uppercase tracking-widest bg-slate-50 px-2">Completed Feature / Report</div>
+
             <div class="absolute top-[130px] left-0 w-[120px] bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex flex-col items-center">
-                <div class="w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center mb-2 shadow-lg shadow-sky-200"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+                <div class="w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center mb-2 shadow-lg shadow-sky-200">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                </div>
                 <span class="text-[10px] font-black text-slate-800 uppercase tracking-tight">Telegram</span>
             </div>
 
             <div class="absolute top-[140px] left-[260px] w-[120px] bg-emerald-500 rounded-2xl p-4 shadow-xl border border-emerald-400 flex flex-col items-center">
-                <div class="w-10 h-10 rounded-full bg-white text-emerald-600 flex items-center justify-center mb-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/></svg></div>
+                <div class="w-10 h-10 rounded-full bg-white text-emerald-600 flex items-center justify-center mb-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                </div>
                 <span class="text-[9px] font-black text-white uppercase text-center">API GATEWAY</span>
             </div>
 
             <div class="absolute top-[380px] left-[260px] w-[120px] bg-slate-800 rounded-2xl p-4 shadow-xl flex flex-col items-center">
-                <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center mb-2 border border-slate-600"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center mb-2 border border-slate-600">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
                 <span class="text-[9px] font-bold text-white text-center">Coordinator</span>
             </div>
 
@@ -67,40 +73,11 @@
             </div>
 
              <div class="absolute top-[440px] left-[520px] w-[200px] bg-white rounded-2xl p-4 shadow-lg border-l-4 border-l-orange-500 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6a2 2 0 0 0 0 4v2a5 5 0 0 1-5 5"/></svg></div>
+                <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2v6a2 2 0 0 0 0 4v2a5 5 0 0 1-5 5"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
                 <div><h4 class="text-[11px] font-black text-slate-800 uppercase">Sam</h4><p class="text-[8px] text-slate-600">Test & Verify</p></div>
             </div>
+
         </div>
     </div>
-
-    <div id="diagramModal" class="fixed inset-0 bg-slate-900/95 z-50 hidden items-center justify-center p-4 cursor-pointer" onclick="toggleModal(false)">
-        <div id="modalContent" class="bg-slate-50 p-10 rounded-[3rem] shadow-2xl flex flex-col items-center justify-center cursor-default overflow-hidden relative max-w-[95vw] max-h-[95vh]" onclick="event.stopPropagation()">
-            
-            <h2 class="text-2xl font-bold mb-6 text-slate-800">AI Agent Architecture</h2>
-            
-            <div id="scaleWrapper" class="origin-center scale-125 flex items-center justify-center">
-                <div id="modalDiagramTarget" class="relative w-[896px] h-[600px]">
-                    </div>
-            </div>
-        </div>
-        <button onclick="toggleModal(false)" class="absolute top-10 right-10 text-white text-4xl hover:text-slate-300">&times;</button>
-    </div>
-
-    <script>
-        function toggleModal(show) {
-            const modal = document.getElementById('diagramModal');
-            const target = document.getElementById('modalDiagramTarget');
-            
-            if (show) {
-                target.innerHTML = document.getElementById('mainDiagram').innerHTML;
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            } else {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                target.innerHTML = '';
-            }
-        }
-    </script>
 </body>
 </html>
