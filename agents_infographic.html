@@ -22,11 +22,11 @@
 
     <div class="group relative w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden shadow-2xl transition-all duration-300">
         
-        <button onclick="toggleModal(true)" class="absolute top-8 right-8 z-20 bg-emerald-600 text-white px-6 py-2 rounded-full font-bold shadow-lg opacity-0 hover:bg-emerald-700 transition-opacity duration-300 hover-trigger">
+        <button onclick="toggleModal(true)" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-slate-700 px-4 py-2 rounded-full font-bold shadow-lg opacity-0 hover:bg-slate-100 transition-opacity duration-300 hover-trigger border border-slate-200 text-xs">
             Enlarge Image
         </button>
 
-        <div class="relative h-[600px]">
+        <div id="mainDiagram" class="relative h-[600px]">
             <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
                 <defs>
                     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -94,19 +94,25 @@
 
     <div id="diagramModal" class="fixed inset-0 bg-slate-900/95 z-50 hidden flex items-center justify-center p-10 cursor-pointer" onclick="toggleModal(false)">
         <div class="w-full h-full flex items-center justify-center" onclick="event.stopPropagation()">
-            <div class="bg-white rounded-[3rem] p-20 shadow-2xl">
-                <h2 class="text-3xl font-bold mb-10 text-slate-800">AI Agent Architecture Details</h2>
-                <div class="text-slate-600">
-                    <p>High-resolution inspection view of your multi-agent workflow.</p>
-                </div>
+            <div id="modalContent" class="bg-slate-50 p-10 rounded-[3rem] w-full max-w-5xl shadow-2xl">
+                <h2 class="text-2xl font-bold mb-6 text-slate-800">AI Agent Architecture</h2>
+                <div id="modalDiagramTarget" class="relative h-[600px] scale-125 origin-center">
+                   </div>
             </div>
-            <button onclick="toggleModal(false)" class="absolute top-10 right-10 text-white text-4xl">&times;</button>
+            <button onclick="toggleModal(false)" class="absolute top-10 right-10 text-white text-4xl hover:text-slate-300">&times;</button>
         </div>
     </div>
 
     <script>
         function toggleModal(show) {
-            document.getElementById('diagramModal').classList.toggle('hidden', !show);
+            const modal = document.getElementById('diagramModal');
+            if (show) {
+                // Copy diagram content to modal
+                document.getElementById('modalDiagramTarget').innerHTML = document.getElementById('mainDiagram').innerHTML;
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
         }
     </script>
 </body>
