@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClaw Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transitions for the hover effect */
+        .group:hover .hover-trigger { opacity: 1; }
+    </style>
 </head>
 <body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen py-12 px-4">
 
     <div class="text-center mb-10 max-w-3xl">
         <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">AI Agent Architecture</h1>
         <p class="text-slate-600 text-lg leading-relaxed">
-            these agents go beyond simple chatbots—they are autonomous systems with defined objectives, 
-            capable of performing tasks independently as well as working collaboratively within a team
+            These agents go beyond simple chatbots—they are autonomous systems with defined objectives, 
+            capable of performing tasks independently as well as working collaboratively within a team.
         </p>
     </div>
 
-    <div class="w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden relative shadow-2xl">
+    <div class="group relative w-full max-w-4xl bg-slate-50 rounded-[3rem] p-10 border border-slate-200 overflow-hidden shadow-2xl transition-all duration-300">
+        
+        <button onclick="toggleModal(true)" class="absolute top-8 right-8 z-20 bg-emerald-600 text-white px-6 py-2 rounded-full font-bold shadow-lg opacity-0 hover:bg-emerald-700 transition-opacity duration-300 hover-trigger">
+            Enlarge Image
+        </button>
+
         <div class="relative h-[600px]">
-            
             <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 0;">
                 <defs>
                     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -77,7 +85,29 @@
                 <div><h4 class="text-[11px] font-black text-slate-800 uppercase">Sam</h4><p class="text-[8px] text-slate-600">Test & Verify</p></div>
             </div>
 
+            <div class="absolute bottom-4 left-0 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                Objective-Driven / Secure /  Independent / Collaborative Teams
+            </div>
+
         </div>
     </div>
+
+    <div id="diagramModal" class="fixed inset-0 bg-slate-900/95 z-50 hidden flex items-center justify-center p-10 cursor-pointer" onclick="toggleModal(false)">
+        <div class="w-full h-full flex items-center justify-center" onclick="event.stopPropagation()">
+            <div class="bg-white rounded-[3rem] p-20 shadow-2xl">
+                <h2 class="text-3xl font-bold mb-10 text-slate-800">AI Agent Architecture Details</h2>
+                <div class="text-slate-600">
+                    <p>High-resolution inspection view of your multi-agent workflow.</p>
+                </div>
+            </div>
+            <button onclick="toggleModal(false)" class="absolute top-10 right-10 text-white text-4xl">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(show) {
+            document.getElementById('diagramModal').classList.toggle('hidden', !show);
+        }
+    </script>
 </body>
 </html>
