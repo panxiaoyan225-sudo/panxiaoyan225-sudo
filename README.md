@@ -12,7 +12,7 @@
 
 * **Forecasting & Predictive Analytics**: Automated time-series forecasting pipelines leveraging SARIMAX models, cloud orchestration, and production-ready scheduling.
 
-[View my **Portfolio**](https://xiaoyanpan.com/)                       
+                   
 
 
 
