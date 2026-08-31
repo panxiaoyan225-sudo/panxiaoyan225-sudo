@@ -4,7 +4,7 @@
 
 * **Data-Driven Foresight:** Turning historical evidence into validated predictions — moving from **what happened** to **what may happen next**.  [📊 View Foresight Modeling Guide](https://github.com/panxiaoyan225-sudo/Data-Driven-Foresight/blob/main/FORESIGHT_MODELING_GUIDE.md))
    
-* **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability [📊 View Containerized ETL](https://panxiaoyan225-sudo.github.io//Containerized-ETL/university_infographic.html)
+* **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability [📊 View Containerized ETL](https://panxiaoyan225-sudo.github.io//Containerized-ETL/infographic.html)
   
 * **Distributed Cloud Engineering(Databricks)**: Modernizing legacy analytics through Databricks and PySpark, enabling scalable processing of large healthcare and financial datasets. [[📊 View Databricks Lakehouse](https://panxiaoyan225-sudo.github.io/Notebooks_Databricks-Colab/healthcare_infographic.html)
 
