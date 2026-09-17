@@ -1,16 +1,15 @@
 # 🛠️ What I Build   ![Visitor Count](https://komarev.com/ghpvc/?username=panxiaoyan225-sudo&color=blue&style=flat-square)      
 
-* **CI/CD Automation:** Production-grade orchestration across **Azure DevOps, GitHub Actions, and Cloud platforms**, with automated monitoring, alerting, and resilient execution. [📊 View Orchestration Evolution](https://panxiaoyan225-sudo.github.io/data-pipelines/data_infographic.html)
-
-* **Data-Driven Foresight:** Turning historical evidence into validated predictions — moving from **what happened** to **what may happen next**.  [📊 From Visibility to Foresight ](https://github.com/panxiaoyan225-sudo/Data-Driven-Foresight/blob/main/README.md) AND [📊Foresight Modeling Guide ](https://github.com/panxiaoyan225-sudo/Data-Driven-Foresight/blob/main/FORESIGHT_MODELING_GUIDE.md)
+* **CI/CD Automation:** Production-grade orchestration across **Azure DevOps, GitHub Actions, and Cloud platforms**, with automated monitoring, alerting, and resilient execution. 
+* **Data-Driven Foresight:** From Visibility to Foresight,Turning historical evidence into validated predictions — moving from **what happened** to **what may happen next**. 
    
-* **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability [📊 View Containerized ETL](https://panxiaoyan225-sudo.github.io//Containerized-ETL/infographic.html)
+* **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability 
   
-* **Distributed Cloud Engineering(Databricks)**: Modernizing legacy analytics through Databricks and PySpark, enabling scalable processing of large healthcare and financial datasets. [[📊 View Databricks Lakehouse](https://panxiaoyan225-sudo.github.io/Notebooks_Databricks-Colab/healthcare_infographic.html)
+* **Distributed Cloud Engineering(Databricks)**: Modernizing legacy analytics through Databricks and PySpark, enabling scalable processing of large healthcare and financial datasets. 
 
 *  **AI & Data Suite** Local-first AI architecture combining semantic search, vector intelligence, and offline Retrieval-Augmented Generation (RAG).
 
-* **Autonomous Multi-Agent Systems (OpenClaw)**: Governed AI agents that monitor, coordinate, and execute analytical workflows while maintaining data integrity and operational oversight. | [📊 View Autonomous Multi-Agent ](https://panxiaoyan225-sudo.github.io/AI-DataSuite/Openclaw.html)
+* **Autonomous Multi-Agent Systems (OpenClaw)**: Governed AI agents that monitor, coordinate, and execute analytical workflows while maintaining data integrity and operational oversight.
 
 * **Forecasting & Predictive Analytics**: Automated time-series forecasting pipelines leveraging SARIMAX models, cloud orchestration, and production-ready scheduling.
 
