@@ -2,7 +2,7 @@
 
 * **CI/CD Automation:** Production-grade orchestration across **Azure DevOps, GitHub Actions, and Cloud platforms**, with automated monitoring, alerting, and resilient execution.
 
-* **Data-Driven Foresight:** From Visibility to Foresight,turning historical evidence into validated predictions — moving from **what happened** to **what may happen next**.
+* **Data-Driven Foresight:** From Visibility to Foresight, turning historical evidence into validated predictions — moving from **what happened** to **what may happen next**.
 
 * **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability
 
