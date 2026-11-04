@@ -8,7 +8,8 @@
 
 * **Distributed Cloud Engineering(Databricks)**: Modernizing legacy analytics through Databricks and PySpark, enabling scalable processing of large healthcare and financial datasets.
 
-*  **AI & Data Suite** Reliable Human–AI Operating System, local-first AI architecture combining semantic search, vector intelligence, and offline Retrieval-Augmented Generation (RAG).
+*  **AI & Data Suite** Reliable Human–AI Operating System, local-first AI architecture combining semantic search, vector intelligence.
+   **Retrieval-Augmented Generation (RAG)**:Grounding foundational models in verified internal enterprise knowledge for high-accuracy execution.
 
 * **Autonomous Multi-Agent Systems (OpenClaw)**: Governed AI agents that monitor, coordinate, and execute analytical workflows while maintaining data integrity and operational oversight.
 
