@@ -16,13 +16,17 @@ Predictive analytics and temporal validation.
 Institutional lifecycle and student progression intelligence.  
 Data-driven analysis for financial, operational and strategic planning.
 
-## 🎯 Engineering Principles  
-***Trustworthy data before sophisticated models.***    
-***Evidence before generated answers.***  
-***Automation with validation and monitoring.***    
-***Agent autonomy within defined boundaries.***   
-***Human accountability for consequential decisions.***    
+<div align="center">
 
+##  Engineering Principles
+
+**Trustworthy data before sophisticated models.**  
+**Evidence before generated answers.**  
+**Automation with validation and monitoring.**  
+**Agent autonomy within defined boundaries.**  
+**Human accountability for consequential decisions.**
+
+</div>>
 
 
  
