@@ -1,20 +1,23 @@
-# 🛠️ What I Build    
+# 🛠️ What I Build      
+1. **Enterprise AI & Knowledge Architecture** Designing AI systems that can retrieve, evaluate and use organizational knowledge within defined operating boundaries.
+**Agentic RAG**: Planning, source selection, iterative retrieval and evidence-grounded response evaluation.  
+**Governed Knowledge Architecture**: Prioritizing internal organizational context, approved external knowledge and model knowledge.  
+**Human–AI Operating Systems**: Coordinating autonomous agents with defined responsibilities, oversight and human accountability.  
 
-* **CI/CD Automation:** Production-grade orchestration across **Azure DevOps, GitHub Actions, and Cloud platforms**, with automated monitoring, alerting, and resilient execution.
+2. **Data Engineering & Automation** Building reliable data workflows that connect ingestion, transformation, validation and delivery.
+**Automated ETL/ELT pipelines** using Python, SQL, Docker and Airflow.  
+**CI/CD orchestration** using Azure DevOps and GitHub Actions.  
+API-based data ingestion, data validation and workflow monitoring 
+**Databricks implementations** using Python, Pandas, SQL and PySpark.
+ 
+3. **Analytics & Predictive Intelligence**
+Turning historical and longitudinal data into validated analysis, forecasts and decision support.  
+Statistical modelling and time-series forecasting.  
+Predictive analytics and temporal validation.  
+Institutional lifecycle and student progression intelligence  
+Data-driven analysis for financial, operational and strategic planning.
 
-* **Data-Driven Foresight:** The Complete Chain of Lifecycle Intelligence; From Visibility to Foresight, turning historical evidence into validated predictions — **moving from trusted data to an earlier, better decision.**
-
-* **Containerized ETL/ELT pipelines**: Docker and Airflow-based ETL/ELT ecosystems with custom validation frameworks to ensure audit-grade data quality and reliability
-
-* **Distributed Cloud Engineering(Databricks)**: Modernizing legacy analytics through Databricks and PySpark, enabling scalable processing of large healthcare and financial datasets.
-
-*  **AI & Data Suite**: **Reliable Human–AI Operating System** combining with **Domain-Specific Organizational Knowledge-Custom Agentic RAG pipeline**,grounding foundational models in verified internal enterprise knowledge for high-accuracy execution.
-
-* **Autonomous Multi-Agent Systems**: Governed AI agents that monitor, coordinate, and execute analytical workflows while maintaining data integrity and operational oversight.
-
-* **Forecasting & Predictive Analytics**: Automated time-series forecasting pipelines leveraging SARIMAX models, cloud orchestration, and production-ready scheduling.
-
-                   
+ 
 
 
 
