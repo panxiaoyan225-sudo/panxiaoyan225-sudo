@@ -23,11 +23,12 @@
 
 ##  Engineering Principles
 
-**Trustworthy data before sophisticated models.**  
-**Evidence before generated answers.**  
-**Automation with validation and monitoring.**  
-**Agent autonomy within defined boundaries.**  
-**Human accountability for consequential decisions.**
+<span style="color:#8b949e">Trustworthy data before sophisticated models.</span><br>
+<span style="color:#8b949e">Evidence before generated answers.</span><br>
+<span style="color:#8b949e">Automation with validation and monitoring.</span><br>
+<span style="color:#8b949e">Agent autonomy within defined boundaries.</span><br>
+<span style="color:#8b949e">Human accountability for consequential decisions.</span>
+
 
 </div>>
 
