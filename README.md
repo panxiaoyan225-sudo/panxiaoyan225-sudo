@@ -1,4 +1,5 @@
-## 🛠️ What I Build      
+## 🛠️ What I Build     
+**Reliable data → Analytical intelligence → Predictive foresight → Governed AI → Human decision**
 1. ***Governed AI & Knowledge Architecture*** Designing AI systems that can retrieve, evaluate and use organizational knowledge within defined operating boundaries.    
 **`Agentic RAG`**: Planning, source selection, iterative retrieval and evidence-grounded response evaluation.    
 **`Governed Knowledge Architecture`**: Prioritizing internal organizational context, approved external knowledge and model knowledge.       
