@@ -1,34 +1,35 @@
 
 ## 🛠️ What I Build
-> Reliable data → Analytical intelligence → Predictive foresight → Governed AI → Human decision  
+> Reliable data → Analytical intelligence → Predictive foresight → Governed AI → Human decision
 
-1. ***Governed AI & Knowledge Architecture*** Designing AI systems that can retrieve, evaluate and use organizational knowledge within defined operating boundaries.    
-**`Agentic RAG`**: Planning, source selection, iterative retrieval and evidence-grounded response evaluation.    
-**`Governed Knowledge Architecture`**: Prioritizing internal organizational context, approved external knowledge and model knowledge.       
-**`Human–AI Operating Systems`**: Coordinating autonomous agents with defined responsibilities, oversight and human accountability.   
-
-3. ***Data Engineering & Automation*** Building reliable data workflows that connect ingestion, transformation, validation and delivery.  
-**`Automated ETL/ELT pipelines`** using Python, SQL, Docker and Airflow.     
-**`CI/CD orchestration`** using Azure DevOps and GitHub Actions.      
-**`API-based`** data ingestion, data validation and workflow monitoring.    
-**`Databricks implementations`** using Python, Pandas, SQL and PySpark.
- 
-4. ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
+ 1. ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
 **`Statistical modelling and time-series forecasting`**.  
 **`Predictive analytics and temporal validation`**.  
 **`Institutional lifecycle and student progression intelligence`**.  
 **`Data-driven analysis`** for financial, operational and strategic planning.
 
+2. ***Data Engineering & Automation*** Building reliable data workflows that connect ingestion, transformation, validation and delivery.  
+**`Automated ETL/ELT pipelines`** using Python, SQL, Docker and Airflow.     
+**`CI/CD orchestration`** using Azure DevOps and GitHub Actions.      
+**`API-based`** data ingestion, data validation and workflow monitoring.    
+**`Databricks implementations`** using Python, Pandas, SQL and PySpark.
+ 
+
+3. ***Governed AI & Knowledge Architecture*** Designing AI systems that can retrieve, evaluate and use organizational knowledge within defined operating boundaries.    
+**`Agentic RAG`**: Planning, source selection, iterative retrieval and evidence-grounded response evaluation.    
+**`Governed Knowledge Architecture`**: Prioritizing internal organizational context, approved external knowledge and model knowledge.       
+**`Human–AI Operating Systems`**: Coordinating autonomous agents with defined responsibilities, oversight and human accountability.   
+
 <div align="center">
 
 ##  Engineering Principles
-
-<span style="color:#8b949e">Trustworthy data before sophisticated models.</span><br>
-<span style="color:#8b949e">Evidence before generated answers.</span><br>
-<span style="color:#8b949e">Automation with validation and monitoring.</span><br>
-<span style="color:#8b949e">Agent autonomy within defined boundaries.</span><br>
-<span style="color:#8b949e">Human accountability for consequential decisions.</span>
-
+> 
+Trustworthy data before sophisticated models  
+Evidence before generated answers.   
+Automation with validation and monitoring.  
+Agent autonomy within defined boundaries.  
+Human accountability for consequential decisions.   
+> 
 
 </div>>
 
