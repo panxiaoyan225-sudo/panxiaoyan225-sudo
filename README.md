@@ -11,10 +11,10 @@
 **`Databricks implementations`** using Python, Pandas, SQL and PySpark.
  
 4. ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
-Statistical modelling and time-series forecasting.  
-Predictive analytics and temporal validation.  
-Institutional lifecycle and student progression intelligence.  
-Data-driven analysis for financial, operational and strategic planning.
+**`Statistical modelling and time-series forecasting`**.  
+**`Predictive analytics and temporal validation`**.  
+**`Institutional lifecycle and student progression intelligence`**.  
+**`Data-driven analysis`** for financial, operational and strategic planning.
 
 <div align="center">
 
