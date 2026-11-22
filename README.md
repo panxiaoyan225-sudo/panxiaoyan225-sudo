@@ -1,6 +1,6 @@
 
 ## 🛠️ What I Build
-> Reliable data → Analytical intelligence → Predictive foresight → Governed AI → Human decision
+> Trusted data → Analytical intelligence → Predictive foresight → Governed AI → Decision
 
  1. ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
 **`Statistical modelling and time-series forecasting`**.  
