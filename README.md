@@ -1,6 +1,6 @@
 
 ## 🛠️ What I Build
-> Trusted data → Analytical intelligence → Predictive foresight → Governed AI → Decision
+> Pipelines → Trusted data → Analytics → Foresight → Governed AI → Decision
 
  1. ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
 **`Statistical modelling and time-series forecasting`**.  
@@ -23,15 +23,10 @@
 <div align="center">
 
 ##  Engineering Principles
-> 
 Trustworthy data before sophisticated models  
 Evidence before generated answers.   
 Automation with validation and monitoring.  
 Agent autonomy within defined boundaries.  
 Human accountability for consequential decisions.   
-> 
+</div>
 
-</div>>
-
-
- 
