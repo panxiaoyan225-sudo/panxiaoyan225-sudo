@@ -1,6 +1,6 @@
 
 ## 🛠️ What I Build
-> Pipelines → Trusted data → Analytics → Foresight → Governed AI → Decision
+> Pipeline → Trusted data → Analytics → Foresight → Governed AI → Decision
 
 1. ***Data Engineering & Automation*** Building reliable data workflows that connect ingestion, transformation, validation and delivery.  
 **`Automated ETL/ELT pipelines`** using Python, SQL, Docker and Airflow.     
