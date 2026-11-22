@@ -20,13 +20,13 @@
 **`Governed Knowledge Architecture`**: Prioritizing internal organizational context, approved external knowledge and model knowledge.       
 **`Human–AI Operating Systems`**: Coordinating autonomous agents with defined responsibilities, oversight and human accountability.   
 
-<div align="center">
+<div align="center"> </div>
 
-##  Engineering Principles
-Trustworthy data before sophisticated models  
-Evidence before generated answers.   
-Automation with validation and monitoring.  
-Agent autonomy within defined boundaries.  
-Human accountability for consequential decisions.   
-</div>
+###  Engineering Principles
+Trustworthy data before sophisticated models.  
+Evidence before generated answers.  
+Automation with validation and monitoring.     
+Agent autonomy within defined boundaries. 
+*Human accountability for consequential decisions. *  
+
 
