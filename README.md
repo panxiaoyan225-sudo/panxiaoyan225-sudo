@@ -12,7 +12,7 @@
 - **Statistical modelling and time-series forecasting**.  
 - **Predictive analytics and temporal validation**.
 - **Data-to-Narrative Pipeline**: Repeatable and reusable pipeline that connects trusted data engineering with analytical intelligence and automated reporting, minimizing manual intervention.  
-   `Data → Automated Data Engineering → Trusted Data Foundation → Analytical Computation → LLM-Generated Narrative → Automated Reporting`
+   `Source Data → Automated Data Engineering → Trusted Data Foundation → Analytical Computation → LLM-Generated Narrative → Automated Reporting`
 - **Institutional lifecycle and student progression intelligence**.  
 - **Data-driven analysis** for financial, operational and strategic planning.
  
