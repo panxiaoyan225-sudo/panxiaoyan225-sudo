@@ -10,13 +10,12 @@
 
 ***Analytics & Predictive Intelligence*** Turning historical and longitudinal data into validated analysis, forecasts and decision support.      
 - **Statistical modelling and time-series forecasting**.  
-- **Predictive analytics and temporal validation**.
-- **Autonomous Data-to-Narrative Engine**:  Agentic • Repeatable • Reusable   
+- **Predictive analytics and temporal validation**. 
 - **Institutional lifecycle and student progression intelligence**.  
 - **Data-driven analysis** for financial, operational and strategic planning.
  
-
 ***Governed AI & Knowledge Architecture***  Designing AI systems that can retrieve, evaluate and use organizational knowledge within defined operating boundaries.    
+- **Autonomous Data-to-Narrative Engine**: Self-driving workflow transforming source data into finished intelligence reports for human review. Agentic • Repeatable • Reusable  
 - **Agentic RAG**: Planning, source selection, iterative retrieval and evidence-grounded response evaluation.    
 - **Governed Knowledge Architecture**: Prioritizing internal organizational context, approved external knowledge and model knowledge.
 - **Evidence-Governed Generation**: Separating numerical computation from language generation, ensuring LLM outputs are grounded in validated analytical results rather than independently generated figures.       
