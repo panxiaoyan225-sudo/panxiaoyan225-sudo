@@ -12,7 +12,6 @@
 - **Statistical modelling and time-series forecasting**.  
 - **Predictive analytics and temporal validation**.
 - **Autonomous Data-to-Narrative Engine**:  Agentic • Repeatable • Reusable   
-`Source Data → Automated Data Engineering → Trusted Data Foundation → Analytical Computation → LLM-Generated Narrative → Automated Reporting`
 - **Institutional lifecycle and student progression intelligence**.  
 - **Data-driven analysis** for financial, operational and strategic planning.
  
